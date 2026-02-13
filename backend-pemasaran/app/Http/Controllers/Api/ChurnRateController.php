@@ -49,3 +49,4 @@ class ChurnRateController extends Controller
         ]);
     }
 }
+
