@@ -143,3 +143,4 @@ export default function CustomerLifetimeValueChart({ year }) {
         </div>
     )
 }
+
