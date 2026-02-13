@@ -34,3 +34,4 @@ class SalesVsScalingRevenueController extends Controller
         return response()->json($data);
     }
 }
+
