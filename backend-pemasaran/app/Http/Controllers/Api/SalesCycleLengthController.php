@@ -37,3 +37,4 @@ class SalesCycleLengthController extends Controller
         ]);
     }
 }
+
