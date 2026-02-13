@@ -60,3 +60,4 @@ class SalesAdequacyRatioController extends Controller
         ]);
     }
 }
+
