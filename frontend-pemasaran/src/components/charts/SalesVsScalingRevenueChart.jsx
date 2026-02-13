@@ -177,3 +177,4 @@ export default function SalesVsScalingRevenueChart({ year }) {
         </div>
     )
 }
+
