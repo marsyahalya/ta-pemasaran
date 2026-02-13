@@ -52,3 +52,4 @@ export default function KpiCard({ title, value }) {
         </div>
     )
 }
+
