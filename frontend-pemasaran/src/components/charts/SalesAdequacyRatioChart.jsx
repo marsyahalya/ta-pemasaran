@@ -122,3 +122,4 @@ export default function SalesAdequacyRatioChart({ year, filterType, month }) {
         </div>
     )
 }
+
