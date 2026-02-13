@@ -37,3 +37,4 @@ class CustomerLifetimeValueController extends Controller
         ]);
     }
 }
+
