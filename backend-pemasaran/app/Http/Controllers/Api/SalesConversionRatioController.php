@@ -63,3 +63,4 @@ class SalesConversionRatioController extends Controller
         ]);
     }
 }
+
