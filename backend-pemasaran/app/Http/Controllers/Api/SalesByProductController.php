@@ -35,3 +35,4 @@ class SalesByProductController extends Controller
         ]);
     }
 }
+
