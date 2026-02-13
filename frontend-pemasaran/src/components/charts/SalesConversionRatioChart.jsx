@@ -24,8 +24,6 @@ export default function SalesConversionRatioChart({ year, filterType, month }) {
             let val = null;
 
             if (typeof rawData === 'object' && rawData !== null && !Array.isArray(rawData)) {
-                // If object, check if sales_conversion_ratio exists or we assume valid object means 0 if missing?
-                // Let's assume if object exists, we have data.
                 val = Number(rawData.sales_conversion_ratio || 0)
             } else if (Array.isArray(rawData) && rawData.length > 0) {
                 val = Number(rawData[0].sales_conversion_ratio || 0)
@@ -58,18 +56,15 @@ export default function SalesConversionRatioChart({ year, filterType, month }) {
         )
     }
 
-    // Data for the foreground progress (the colored part)
     const data = [
         { name: "Ratio", value: ratio },
         { name: "Remaining", value: (100 - ratio) > 0 ? (100 - ratio) : 0 }
     ]
 
-    // Data for the background track (full circle)
     const trackData = [{ value: 100 }]
 
     return (
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow h-full flex flex-col justify-center items-center relative overflow-hidden">
-            {/* Decorative background blur */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-full blur-3xl -z-10 opacity-60"></div>
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-50 rounded-full blur-3xl -z-10 opacity-60"></div>
 
@@ -89,7 +84,6 @@ export default function SalesConversionRatioChart({ year, filterType, month }) {
                             </filter>
                         </defs>
 
-                        {/* Background Track Circle */}
                         <Pie
                             data={trackData}
                             cx="50%"
@@ -102,7 +96,6 @@ export default function SalesConversionRatioChart({ year, filterType, month }) {
                             isAnimationActive={false}
                         />
 
-                        {/* Foreground Progress Circle */}
                         <Pie
                             data={data}
                             cx="50%"
@@ -120,7 +113,6 @@ export default function SalesConversionRatioChart({ year, filterType, month }) {
                             <Cell fill="transparent" />
                         </Pie>
 
-                        {/* Center Text */}
                         <text
                             x="50%"
                             y="45%"
