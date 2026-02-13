@@ -46,3 +46,4 @@ class TotalSalesController extends Controller
         ]);
     }
 }
+
